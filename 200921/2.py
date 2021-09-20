@@ -29,8 +29,11 @@ def index(line):
 
 lines = [0, 1, 2, 3, 4, 5, 6, 7, 8]
 
-data = input()
+# data = input()
+# data = [int(el) for el in data]
+input = open('input.txt', 'r')
+data = input.readline()
+data = data.rstrip()
 data = [int(el) for el in data]
-
 
 index(data)
