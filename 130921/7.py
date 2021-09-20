@@ -1,0 +1,12 @@
+#сем (спирал)
+
+
+
+import turtle
+turtle.shape('turtle')
+turtle.speed('fastest')
+def spiral(a, dphi):
+	for i in range(1, 1000, 1):
+		turtle.forward(a*dphi*(1+(i*dphi)**2)**0.5)
+		turtle.left(dphi)
+spiral(0.001, 10) 
