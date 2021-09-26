@@ -1,4 +1,4 @@
-#тринадцатб :)
+# тринадцатб :)
 
 import turtle
 import numpy as np
@@ -10,12 +10,14 @@ turtle.speed('fastest')
 # begin_fill() 	Необходимо вызвать перед рисованием фигуры, которую надо закрасить
 # end_fill() 	Вызвать после окончания рисования фигуры
 
+
 def mnogoug(n, l, alpha, decimal):
-	angle = 180 - 180*(n-2)/n
-	turtle.setheading(alpha)
-	for i in range(1, math.floor(n*decimal)+1, 1):
-		turtle.forward(l)
-		turtle.left(angle)
+    angle = 180 - 180 * (n - 2) / n
+    turtle.setheading(alpha)
+    for i in range(1, math.floor(n * decimal) + 1, 1):
+        turtle.forward(l)
+        turtle.left(angle)
+
 
 turtle.color('yellow')
 turtle.begin_fill()

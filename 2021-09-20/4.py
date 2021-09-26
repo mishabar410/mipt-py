@@ -1,5 +1,3 @@
-
-
 from random import *
 import turtle
 
@@ -13,26 +11,27 @@ steps_of_time_number = 100
 # 	unit.forward(10)
 
 def set_pool(pool):
-	for unit in pool:
-		unit.penup()
-		unit.speed(speed='fastest')
-		unit.shape('circle')
-		unit.goto(randint(-100, 100), randint(-100, 100))
-		unit.left(random()*360)
+    for unit in pool:
+        unit.penup()
+        unit.speed(speed='fastest')
+        unit.shape('circle')
+        unit.goto(randint(-100, 100), randint(-100, 100))
+        unit.left(random() * 360)
 
 
 def move_pool(pool):
-	for unit in pool:
-		if(unit.xcor() > 200 or  unit.xcor() < -200):
-			unit.setheading(180 - unit.heading())
-		if(unit.ycor()>200 or unit.ycor()<-200):
-			unit.setheading(360 - unit.heading())
-	for unit in pool:
-		unit.forward(10)	 
- 
+    for unit in pool:
+        if(unit.xcor() > 200 or unit.xcor() < -200):
+            unit.setheading(180 - unit.heading())
+        if(unit.ycor() > 200 or unit.ycor() < -200):
+            unit.setheading(360 - unit.heading())
+    for unit in pool:
+        unit.forward(10)
+
+
 pool = [turtle.Turtle(shape='turtle') for i in range(number_of_turtles)]
 
 set_pool(pool)
 
 for i in range(1, 10**6):
-	move_pool(pool)
+    move_pool(pool)
