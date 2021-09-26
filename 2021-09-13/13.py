@@ -6,9 +6,9 @@ import math
 turtle.shape('turtle')
 turtle.speed('fastest')
 
-# color() 	Установить цвет
-# begin_fill() 	Необходимо вызвать перед рисованием фигуры, которую надо закрасить
-# end_fill() 	Вызвать после окончания рисования фигуры
+# color()   Установить цвет
+# begin_fill()  Необходимо вызвать перед рисованием фигуры, которую надо закрасить
+# end_fill()    Вызвать после окончания рисования фигуры
 
 
 def mnogoug(n, l, alpha, decimal):
@@ -42,4 +42,11 @@ turtle.width(5)
 turtle.pendown()
 turtle.color('red')
 mnogoug(100, 0.9, -90, 0.5)
+turtle.penup()
+turtle.goto(0, 50)
+turtle.pendown()
+turtle.width(5)
+turtle.color('black')
+turtle.goto(0, 30)
+
 turtle.done()
