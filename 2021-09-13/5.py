@@ -1,4 +1,5 @@
 # пят
+import turtle 
 def square(a):
     turtle.setheading(90)
     turtle.forward(a)
