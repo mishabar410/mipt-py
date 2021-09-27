@@ -1,4 +1,3 @@
-#мне надо было сделать коммит, так попросили)
 from random import *
 import turtle
 
