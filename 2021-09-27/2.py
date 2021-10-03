@@ -69,26 +69,29 @@ def draw_animal(x, y, scale, should_be_flipped):
     ani_surf = pygame.Surface((scale*250, scale*300), pygame.SRCALPHA, 32)
     ani_surf = ani_surf.convert_alpha()
     ellipse(ani_surf, (255, 255, 255), (scale*30, scale*100, scale*200, scale*60)) #draws the main body
-    ellipse(ani_surf, (255, 255, 255), (scale*200, 0, scale*30, scale*150)) #draws the neck
+    ellipse(ani_surf, (255, 255, 255), (scale*200, 0, scale*30, scale*140)) #draws the neck
     ellipse(ani_surf, (255, 255, 255), (scale*190, 0, scale*60, scale*40)) #draws the head
-    draw_animal_ear(175*scale, 10*scale, 3, ani_surf)
-    draw_animal_ear(165*scale, 20*scale, 3, ani_surf)
+    draw_animal_ear(179*scale, 10*scale, scale*3, ani_surf)
+    draw_animal_ear(178*scale, 20*scale, scale*3, ani_surf)
     for i in [(40*scale,120*scale), (80*scale,140*scale), (120*scale,125*scale), (160*scale, 140*scale)]:
-        draw_animal_leg(i[0], i[1], 1, ani_surf)
+        draw_animal_leg(i[0], i[1], scale, ani_surf)
     circle(ani_surf, (229, 128, 255), (230*scale, 15*scale), 12*scale)
     circle(ani_surf, (0, 0, 0), (235*scale, 15*scale), 8*scale)
     blik_surf = pygame.Surface((scale*10, scale*5), pygame.SRCALPHA, 32)
     blik_surf = blik_surf.convert_alpha()
     ellipse(blik_surf, (255, 255, 255), (0, 0, scale*10, scale*5))
     blik_surf = pygame.transform.rotate(blik_surf, -60)
-    ani_surf.blit(blik_surf, (225, 5))
+    ani_surf.blit(blik_surf, (225*scale, 5*scale))
     if(should_be_flipped == True):
         ani_surf = pygame.transform.flip(ani_surf, True, False)	
     screen.blit(ani_surf, (x, y))
 
 
-draw_klumba(200, 300, 3, True)
-draw_animal(-50, 250, 1, False)
+draw_klumba(200, 390, 2, True)
+# draw_animal(-150, 290, 2, False)
+draw_klumba(10, 250, 1, False)
+draw_animal(-290, 150, 2, False)
+draw_animal(240, 180, 0.5, True)
 
 pygame.display.update()
 clock = pygame.time.Clock()
